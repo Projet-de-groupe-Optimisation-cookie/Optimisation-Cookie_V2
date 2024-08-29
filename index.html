@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Cookie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#"><i class="fa-solid fa-cookie-bite"></i>Cookie Cookie</a>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav-links">
+                <ul >
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </ul>
+            </nav>
+
+            <i id="Cart" class="fa-solid fa-cart-shopping"></i>
+
+            <div id="cart-content" style="display: none;">
+                <button id="close-cart">X</button>
+                <h3>Mon panier</h3>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total"></span></p>
+                <div class="buttonzone">
+                    <button id="clear-cart">Vider le panier</button>
+                    <button id="checkout">Valider la commande</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section1">
+            <div id="div_section1" class="container">
+                <article>
+                    <h1>Delicious Cookies Baked with Love</h1>
+                    <p>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</p>
+                    <div>
+                        <a href="#" class="button_black">Explore Menu</a>
+                        <a href="#" class="button_black">Contact Us</a>
+                    </div>
+                </article>
+                <img src="img/5.jpg">
+            </div>
+        </section>
+        <section id="section2" class="container">
+            <h2>Our Menu</h2>
+            <p id="p_section2">Explore Our Delectable Cookies</p>
+            <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
+            <div id="div_section2">
+                <article>
+                    <img src="img/1.jpg" alt="Chocolate Chip Cookies">
+                    <div>
+                        <h3>Chocolate Chip</h3>
+                        <p>Our classic chocolate chip cookies, baked to perfection.</p>
+                        <div>
+                            <p class="price">$2.50</p>
+                            <a href="#" class="addtoCart button_black" data-name="Chocolate Chip" data-price="2.50">Add to Cart</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/2.jpg" alt="Oatmeal Raisin Cookies">
+                    <div>
+                        <h3>Oatmeal Raisin</h3>
+                        <p>Chewy oatmeal cookies with plump raisins.</p>
+                        <div>
+                            <p class="price">$2.25</p>
+                            <a href="#" class="addtoCart button_black" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/3.jpg" alt="Peanut Butter Cookies">
+                    <div>
+                        <h3>Peanut Butter</h3>
+                        <p>Rich and creamy peanut butter cookies.</p>
+                        <div>
+                            <p class="price">$2.75</p>
+                            <a href="#" class="addtoCart button_black" data-name="Peanut Butter" data-price="2.75">Add to Cart</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/4.jpg" alt="Sugar Cookies">
+                    <div>
+                        <h3>Sugar</h3>
+                        <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
+                        <div>
+                            <p class="price">$2.00</p>
+                            <a href="#" class="addtoCart button_black" data-name="Sugar" data-price="2.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>        
+        <section id="section3" class="container">
+            <img src="img/6.jpg">
+            <article>
+                <h2>About us</h2>
+                <h3>Baking with Passion and Tradition</h3>
+                <p>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</p>
+                <p>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</p>
+            </article>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <h3>Get in Touch</h3>
+            <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form action="#">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Email" required>
+                <textarea cols="50" rows="10" placeholder="Message" required></textarea>
+                <button>Submit</button>
+            </form>
+    </main>
+    <footer id="footer">
+        <h2>Contact</h2>
+        <div id="div_footer" class="container">
+            <div id="apropos">
+                <p>My location : 140 avenue jacques troussel, 83136 Rocbaron.</p>
+                <p>My phone number : <a href="tel:+33556677889">05 56 67 78 89.</a></p>
+                <p>I anwser phone from monday to friday at 10h am to 7h pm.</p>
+            </div>
+            <div id="partenaire">
+                <ul>
+                    <li><a href="https://www.castorama.fr/">Castorama</a></li>
+                    <li><a href="https://www.cash-piscines.com/">Cash piscine</a></li>
+                    <li><a href="https://www.renault.fr/">Renault</a></li>
+                    <li><a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a></li>
+                    <li><a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a></li>
+                    <li><a href="https://travail-emploi.gouv.fr">Travail Emploi</a></li>   
+                </ul>
+            </div>
+            <div id="tos">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+                <div class="social">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+    </div>
+    </footer>
+
+    <!-- Popup pour la confirmation d'ajout au panier -->
+    <div id="cart-popup" class="cart-popup">
+        <p id="popup-message"></p>
+        <button id="close-popup">OK</button>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
