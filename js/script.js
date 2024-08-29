@@ -58,9 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajouter ou supprimer la classe "show" pour afficher ou cacher les liens
         navLinks.classList.toggle('show');
     });
-
-    // Mise à jour des liens (appelez cette fonction si nécessaire)
-    // updateAnchors(links, 'nav-links');
 });
 
 // FIN menu responsive_____________________________________________________ 
