@@ -429,6 +429,12 @@ button:hover{
 }
 
 @media screen and (max-width:1024px){
+    #cart{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+    }
     #nav-links {
         display: none;
         flex-direction: column; 
