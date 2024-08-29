@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // FIN menu responsive_____________________________________________________ 
 
 // panier_____________________________________________________
-var button = document.querySelector('.addtoCart');
+const button = document.querySelector('.addtoCart');
 
 // Ajout au panier
 document.querySelectorAll('.addtoCart').forEach(button => {
