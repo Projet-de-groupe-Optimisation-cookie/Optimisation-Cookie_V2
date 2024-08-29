@@ -2,14 +2,27 @@
 function showPopup(message) {
     const popup = document.getElementById('cart-popup');
     const popupMessage = document.getElementById('popup-message');
-    popupMessage.textContent = message;
-    popup.style.display = 'block';
+    const closeButton = document.getElementById('close-popup');
 
-    // Fermer la popup quand le bouton OK est cliqué
-    document.getElementById('close-popup').addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
+    // Vérifier si les éléments de la popup existent
+    if (popup && popupMessage && closeButton) {
+        popupMessage.textContent = message;
+        popup.style.display = 'block'; // Afficher la popup
+
+        // Fermer la popup quand le bouton OK est cliqué
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none'; // Masquer la popup
+        });
+
+        // Faire disparaître la popup après quelques secondes
+        setTimeout(() => {
+            popup.style.display = 'none'; // Masquer la popup après 3 secondes
+        }, 3000); // 3 secondes
+    } else {
+        console.error('Les éléments de la popup sont introuvables.');
+    }
 }
+
 
 // menu responsive_____________________________________________________ 
 // Liste des liens à ajouter
@@ -63,6 +76,7 @@ document.querySelectorAll('.addtoCart').forEach(button => {
 
         // Récupérer les éléments actuels du panier dans le localStorage
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        console.log(cart);
 
         // Ajouter le nouveau produit au panier
         cart.push({ name: productName, price: productPrice });
@@ -137,22 +151,26 @@ clearCartButton.addEventListener('click', () => {
 const checkoutButton = document.getElementById('checkout');
 checkoutButton.addEventListener('click', () => {
     // Vérifier si le panier n'est pas vide dans le localStorage
-    if (localStorage.getItem('cart')) {
+    const cart = localStorage.getItem('cart');
+    // console.log("Panier actuel:", cart);
+
+    if (cart && JSON.parse(cart).length > 0) { // Vérifie si le panier n'est pas vide
         // Générer un ID aléatoire pour le bon de commande (juste pour l'exemple)
         const orderId = Math.floor(Math.random() * 1000000);
-
+        
         // Afficher un message avec l'ID de commande
         showPopup(`Commande validée! Numéro de commande: ${orderId}`);
-
+        
         // Vider le localStorage
         localStorage.removeItem('cart');
         // Mettre à jour l'affichage du panier
         document.getElementById('cart-items').innerHTML = '';
         document.getElementById('cart-total').textContent = '0.00';
-    } else {
         // Si le panier est vide, afficher un message d'erreur ou une notification
-        showPopup("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
+    } else {
+        showPopup("Votre panier est vide . Ajoutez des articles avant de valider la commande.");
     }
 });
+
 
 // panier_____________________________________________________

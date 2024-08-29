@@ -147,7 +147,7 @@ header nav ul{
 }
 
 
-#Cart{
+#cart{
     position: absolute;
     right: 20px;
     color: #fff;
@@ -158,8 +158,8 @@ header nav ul{
     background-color: #fff;
     position: absolute;
     right: 0;
-    top: 45px;
-    padding: 50px 20px;
+    top: 50px;
+    padding: 20px 20px;
 }
 
 #close-cart{
@@ -479,7 +479,7 @@ button:hover{
         display: block;
     }
 
-    #Cart{
+    #cart{
         display: none;
     }
 
